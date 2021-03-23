@@ -5,7 +5,7 @@
 # @raycast.authorURL https://github.com/lajlev
 # @raycast.description SOS International
 
-# @raycast.icon ??
+# @raycast.icon 🐴
 # @raycast.mode silent
 # @raycast.packageName Systems
 # @raycast.schemaVersion 1
