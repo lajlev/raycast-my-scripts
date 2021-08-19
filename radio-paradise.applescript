@@ -12,14 +12,15 @@
 
 
 tell application "System Events"
-  
-  if not (application process "Radio Paradise" exists) then
-    activate application "Radio Paradise" 
-  end if
+  set frontmostApplicationName to name of 1st process whose frontmost is true
 
-  tell process "Radio Paradise"
-    click menu item "Play" of menu "File" of menu bar 1
-  end tell
+  if not (application process "Radio Paradise" exists) then
+    activate application "Radio Paradise"
+  else
+    activate application "Radio Paradise"
+    key code 49 -- space bar
+    activate application frontmostApplicationName
+  end if
 
 end tell
 
