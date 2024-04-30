@@ -1,6 +1,6 @@
 #!/usr/bin/osascript
 
-# @raycast.title Login SOS
+# @raycast.title Password Cactus
 # @raycast.author Michael Lajlev
 # @raycast.authorURL https://github.com/lajlev
 # @raycast.description Login in with username and password
@@ -10,15 +10,12 @@
 # @raycast.packageName Systems
 # @raycast.schemaVersion 1
 
-set getPass to do shell script "security find-generic-password -s 'sos-password' -a 'sosdaljv' -w"
-delay 1.0
+# Requirement: Set password
+# > security add-generic-password -l "Raycast password" -a "RaycastPassword" -s "raycast password" -w "SomeAwe$omePa$$w0rd"
+
+set getPass to do shell script "security find-generic-password -a 'cactus' -w"
+
 
 tell application "System Events"
-  keystroke "sosdaljv"
-  delay 0.5
-  keystroke tab
-  delay 0.5
   keystroke getPass
-  delay 0.5
-  keystroke return
 end tell
